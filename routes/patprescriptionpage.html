@@ -56,13 +56,13 @@ button:hover {
 <body>
 <div class="w3-top" >
   <div class="w3-bar w3-wide w3-padding w3-card" style="background-color:white">
-    <a href="http://localhost:8080/home" style="color:#ff0000"class="w3-bar-item w3-button"><h7><b>MEDI</h7>TRAP</a>
-	      <a href="http://localhost:8080/map" class="w3-bar-item w3-button">MAP</a>
+    <a href="/home" style="color:#ff0000"class="w3-bar-item w3-button"><h7><b>MEDI</h7>TRAP</a>
+	      <a href="/map" class="w3-bar-item w3-button">MAP</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="http://localhost:8080/home" class="w3-bar-item w3-button">HOME</a>
-      <a href="http://localhost:8080/about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="http://localhost:8080/contact" class="w3-bar-item w3-button">CONTACT</b></a>
+      <a href="/home" class="w3-bar-item w3-button">HOME</a>
+      <a href="/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="/contact" class="w3-bar-item w3-button">CONTACT</b></a>
     </div>
   </div>
 </div>
@@ -74,7 +74,7 @@ button:hover {
 					<form method="post" action="/patview1">
 					<label><b>SEARCH DRUG</b></label><br>
                     <input name="drugname" type="text" placeholder="Enter Drugname.." value=""><br><br>
-                    <button type="submit" onclick="http://localhost:8080:patview1"><b>SEARCH</b></button></form></div></div></div>
+                    <button type="submit" onclick=":patview1"><b>SEARCH</b></button></form></div></div></div>
 
 			<div class="top-centered1">
 			<div class="container">
@@ -82,7 +82,7 @@ button:hover {
 			<form method="post" action="/patview">
 			<label><b>USERNAME</b></label><br>
 			<input type="text" placeholder="Enter username" name="username" required><br><br>
-			<button  onclick="http://localhost:8080/patview" required><b>GET PRESCRIPTION</b></button></form></div></div></div>
+			<button  onclick="/patview" required><b>GET PRESCRIPTION</b></button></form></div></div></div>
 
 
 </body>
