@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>MAIN PAGE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+.my {
+    position: fixed;
+    left:1%;
+	top:13%;
+    bottom:0;}
+	
+ button {
+    background-color: #e6e600;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+	width:150%;
+	border-radius: 15px;
+    
+    cursor: pointer;
+    
+    opacity: 0.9;
+}
+button:hover {
+    opacity:1;
+	border-color: red;
+}
+.top-centered {
+    position: absolute;
+    top: 40%;
+    right:15%;
+	}
+.w3-padding{padding:20px 16px!important}
+</style>
+<body style="background-color:white">
+<!-- Navbar (sit on top) -->
+<div class="w3-top" >
+  <div class="w3-bar w3-wide w3-padding w3-card" style="background-color:white">
+<a href="http://localhost:8080/home" style="color:#ff0000"class="w3-bar-item w3-button"><h7><b>MEDI</h7>TRAP</a>
+	      <a href="http://localhost:8080/map" class="w3-bar-item w3-button">MAP</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:8080/home" class="w3-bar-item w3-button">HOME</a>
+      <a href="http://localhost:8080/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="http://localhost:8080/contact" class="w3-bar-item w3-button">CONTACT</b></a>
+
+    </div>
+  </div>
+</div>
+<div class="my">  <img src="http://newsroom.gehealthcare.com/wp-content/uploads/2017/05/Main_Day1_Healthcare_MOV8_Patient_v06.gif" ; style="width:140%">
+</div> 
+	<div class="top-centered">
+   <button  type="submit" onclick="location.href='http://localhost:8080/login';"><h4><b>Login</b></h4></button>
+   </div>
+ </body>
+</html>

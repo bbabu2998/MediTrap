@@ -1,0 +1,89 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial;}
+* {box-sizing: border-box}
+textarea[type=text],input[type=text], input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: #f1f1f1;
+    background: #f1f1f1;
+}
+.top-centered {
+    position: absolute;
+    top:40%;
+    left:8%;
+	}
+.top-centered1 {
+    position: absolute;
+    top:40%;
+    right:23%;
+	}
+hr {
+    border: 1px solid Dodgerblue;
+    margin-bottom: 20px;
+}
+button {
+    background-color: #e6e600;
+    color: black;
+	border-radius: 15px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-color: red;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+}
+button:hover {
+    opacity:1;
+}
+.container {
+    background-color: #d9d9d9;
+    color: #b33c00;
+	width:200%;
+	height:300px;
+     border:1px solid grey;
+	 border-radius: 45px;
+     padding: 10px;
+	}
+
+.w3-padding{padding:20px 16px!important}
+</style>
+<body>
+<div class="w3-top" >
+  <div class="w3-bar w3-wide w3-padding w3-card" style="background-color:white">
+    <a href="http://localhost:8080/home" style="color:#ff0000"class="w3-bar-item w3-button"><h7><b>MEDI</h7>TRAP</a>
+	      <a href="http://localhost:8080/map" class="w3-bar-item w3-button">MAP</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:8080/home" class="w3-bar-item w3-button">HOME</a>
+      <a href="http://localhost:8080/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="http://localhost:8080/contact" class="w3-bar-item w3-button">CONTACT</b></a>
+    </div>
+  </div>
+</div>
+<img src="https://images.pexels.com/photos/7919/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" ; style="width:100%">
+
+					<div class="top-centered">
+					<div class="container">
+					<div align="center">
+					<form method="post" action="/patview1">
+					<label><b>SEARCH DRUG</b></label><br>
+                    <input name="drugname" type="text" placeholder="Enter Drugname.." value=""><br><br>
+                    <button type="submit" onclick="http://localhost:8080:patview1"><b>SEARCH</b></button></form></div></div></div>
+
+			<div class="top-centered1">
+			<div class="container">
+			<div align="center">
+			<form method="post" action="/patview">
+			<label><b>USERNAME</b></label><br>
+			<input type="text" placeholder="Enter username" name="username" required><br><br>
+			<button  onclick="http://localhost:8080/patview" required><b>GET PRESCRIPTION</b></button></form></div></div></div>
+
+
+</body>
+</html>

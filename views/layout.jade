@@ -1,0 +1,25 @@
+doctype html
+html
+ head
+  title  Pharmacies
+  style.
+    body {
+        font-family: Verdana;
+        font-size: 13px;
+        color: black;
+        background: #F7DC6F;
+    }
+  body
+   p(style='white-space:pre;')
+   div
+    table
+     thead
+      tr
+       th PHARMACY NAME(click here)
+       th ADDRESS
+        tbody
+         each drug in users
+          tr
+           td
+            a(href="https://maps.google.com/?q=#{drug.address}") #{drug.pharmacyname} 
+           td=drug.address

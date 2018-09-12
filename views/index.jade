@@ -1,0 +1,42 @@
+doctype html
+html
+ head
+  title Prescriptions
+  style.
+    body {
+        font-family: Verdana;
+        font-size: 13px;
+        color: black;
+        background: #F7DC6F;
+    }
+    table, th, td {
+      border: 1px solid black;
+                    }
+  body
+   p(style='white-space:pre;')
+   div
+    table
+     thead
+      tr
+       th HOSPITAL NAME
+       th ADDRESS
+       th PATIENT NAME
+       th USERNAME
+       th PHONE NO
+       th AGE
+       th GENDER
+       th QUALIFICATION
+       th MEDICINE
+        tbody
+         each docprescription in users
+          tr 
+           td=docprescription.hospitalname
+           td=docprescription.address
+           td=docprescription.name
+           td=docprescription.username
+           td=docprescription.phonenumber
+           td=docprescription.age
+           td=docprescription.gender
+           td=docprescription.qualification
+           td=docprescription.medicine
+  

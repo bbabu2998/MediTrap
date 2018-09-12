@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial;}
+* {box-sizing: border-box}
+textarea[type=text],input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: #f1f1f1;
+    background: #f1f1f1;
+}
+.top-centered {
+    position: absolute;
+    top:10%;
+    left:5%;
+	}
+hr {
+    border: 1px solid Dodgerblue;
+    margin-bottom: 25px;
+}
+button {
+    background-color: #ff1a1a;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+	border-radius: 10px;
+    cursor: pointer;
+    width: 40%;
+	border-radius: 15px;
+    opacity: 0.9;
+}
+label.required { color:#662200; }
+button:hover {
+    opacity:1;
+}
+.container {
+      background-color:#d9d9d9;
+	 color: #b33c00;
+     border:1px solid grey;
+     width:90%;
+	 border-radius: 45px;
+    padding: 10px;
+	}
+.w3-padding{padding:20px 16px!important}
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: dodgerblue;
+}
+
+.signupbtn,.cancelbtn {
+  float: left;
+  width: 50%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 300px) {
+    .signupbtn, .cancelbtn  {
+       width: 80%;
+    }
+}
+</style>
+<body>
+<div class="w3-top" >
+  <div class="w3-bar w3-wide w3-padding w3-card" style="background-color:white">
+    <a href="http://localhost:8080/home" style="color:#ff0000"class="w3-bar-item w3-button"><h7><b>MEDI</h7>TRAP</a>
+	      <a href="http://localhost:8080/map" class="w3-bar-item w3-button">MAP</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:8080/home" class="w3-bar-item w3-button">HOME</a>
+      <a href="http://localhost:8080/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="http://localhost:8080/contact" class="w3-bar-item w3-button">CONTACT</B></a>
+
+    </div>
+  </div>
+</div>
+<img src="https://media.glamour.com/photos/598a0030a2b252644be67afa/1:1/w_352/grey's-anatomy.jpg" style="width:100%;">
+
+<div class="top-centered"><div class="container">
+  <form  method="post" action="/response1" onclick=" return validatePassword()"onclick=" return validatePassword()">
+
+  <h1 align="center" ><b>Doctor SignUp Page</b></h1>
+   <hr>
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+	<label><b>User Name</b></label>
+  <input type="text" id="username" placeholder="Enter username" name="username" required>
+	<label><b>Phone number</b></label>
+    <input type="text" placeholder="Enter a number" name="phoneno" required>
+	<label><b>Hospital Name</b></label>
+    <input type="text" placeholder="Enter Name" name="hospname" required>
+	<label for="subject"><b>Hospital Address</b></label><br>
+    <textarea type="text" name="hospaddr" placeholder="Write address" style="width:100%;height:200px;" required></textarea><br>
+	<label><b>Qualification</b></label>
+    <input type="text" placeholder="Enter details" name="qualification" required>
+	<label><b>Doctor's ID</b></label>
+    <input type="text" placeholder="Enter id" name="docid" required>
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label><b> Password</b></label>
+    <input type="password" id="newPassword" placeholder="Enter Password" name="pwd" required>
+
+    <label><b>Confirm Password</b></label>
+    <input type="password" id="confirmPassword" placeholder="Re-enter Password" name="confirmpwd" required>
+        <div class="clearfix">
+
+	  <button type="submit"class="signupbtn" >Sign Up</button>
+	  <button type="button" class="cancelbtn" onclick="location.href='http://localhost:8080/login';">Cancel</button>
+
+	</div>
+  </div>
+</form>
+</div>
+<script>
+var password = document.getElementById("newPassword")
+  , confirmPassword = document.getElementById("confirmPassword")
+  , username = document.getElementById("username");
+
+function validatePassword(){
+  if(newPassword.value != confirmPassword.value) {
+    confirmPassword.setCustomValidity("Passwords Don't Match");
+  } else if(username.value == newPassword.value) {
+    confirmPassword.setCustomValidity("username and password shouldn't be same");
+  } else{
+    confirmPassword.setCustomValidity('');
+  }
+}
+
+newPassword.onchange = validatePassword;
+confirmPassword.onkeyup = validatePassword;
+username.onkeyup = validatePassword;
+</script>
+</div>
+</body>
+</html>

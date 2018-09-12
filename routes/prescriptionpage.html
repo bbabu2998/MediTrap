@@ -1,0 +1,151 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial;}
+* {box-sizing: border-box}
+textarea[type=text],input[type=text], input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: #f1f1f1;
+    background: #f1f1f1;
+}
+.top-centered {
+    position: absolute;
+    top:15%;
+    left:8%;
+	}
+.top-centered1 {
+    position: absolute;
+    top:18%;
+    right:4%;
+	}
+hr {
+    border: 1px solid Dodgerblue;
+    margin-bottom: 20px;
+}
+button {
+    background-color: #e6e600;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+	border-radius: 15px;
+    border-color: red;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+}
+label.required { color:#662200; }
+button:hover {
+    opacity:1;
+}
+.container {
+      background-color:#d9d9d9;
+	 color: #b33c00;
+	 border-radius: 45px;
+     border:1px solid grey;
+     width:90%;
+    padding: 10px;
+	}
+.w3-padding{padding:20px 16px!important}
+.sbtn,.cbtn {
+  float: left;
+  width: 50%;
+  }
+  .clearfix::after {
+    content: " ";
+    clear: both;
+    display: table;}
+table {
+    font-family: arial, sans-serif;
+	color: #b33c00;
+    padding: 10px;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align:center;
+    }
+.sbtn,.cbtn {
+  float: left;
+  width: 50%;
+  }
+ .clearfix::after {
+    content: " ";
+
+    clear: both;
+    display: table;}
+
+</style>
+<body>
+<div class="w3-top" >
+  <div class="w3-bar w3-wide w3-padding w3-card" style="background-color:white">
+    <a href="http://localhost:8080/home" style="color:#ff0000"class="w3-bar-item w3-button"><h7><b>MEDI</h7>TRAP</a>
+	      <a href="http://localhost:8080/view1" class="w3-bar-item w3-button">VIEW PRESCRIPTION</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:8080/home" class="w3-bar-item w3-button">HOME</a>
+      <a href="http://localhost:8080/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="http://localhost:8080/contact" class="w3-bar-item w3-button">CONTACT</b></a>
+    </div>
+  </div>
+</div>
+<img src="https://image.freepik.com/free-vector/abstract-background-design_1116-113.jpg" style="width:100%">
+<div class="top-centered">
+<div class="container">
+<form method="post" action="/confirm" >
+
+<div align="center">
+<h1><b>PRESCRIPTION PAGE</b></h1><hr>
+<div class="clearfix"><div class="sbtn">
+	<label><b>Hospital Name</b></label><br>
+    <input type="text" placeholder="Enter Name" name="hospitalname" required><br>
+	<label for="subject"><b>Hospital Address</b></label><br>
+    <textarea type="text" placeholder="Enter Address" name="address" style="width:90%;height:200px;" required></textarea><br>
+	<label><b>Patient Name</b></label><br>
+	<input type="text" placeholder="Enter name" name="name" required><br>
+	<label><b>User Name</b></label><br>
+	<input type="text" placeholder="Enter username" name="username" required><br>
+	<label  for="name"><b>Patient Type</b></label> <br>
+                        <br>
+                            <label>
+                                <input type="radio" name="patient_type"  value="new" checked=""> New
+                            </label>
+                            <label >
+                                <input type="radio" name="patient_type" value="old"> Old
+                            </label>
+                           <br>
+                        <br>
+						<label for="gender"><b>Gender :</b></label><br>
+                    <select style="width:90%;height:54px"id="select" name="gender">
+                        <option value="">Select</option>
+						<option value="male">Male</option>
+                        <option value="female">Female</option>
+						<option value="others">Others</option>
+                    </select><br><br>
+	<label><b>Age</b></label><br>
+	<input type="text" placeholder="Enter Age" name="age" required><br><label><b>Contact Number</b></label>
+	<input type="text" placeholder="Enter number" name="phonenumber" required><br></div>
+	<div class="cbtn">
+
+
+	<div id="txt" class="top-left"></div>
+<label><b>Doctor Name</b></label>
+<input type="text" placeholder="Enter name" name="docname" required>
+<label><b>Qualification</b></label>
+    <input type="text" placeholder="Enter qualification" name="qualification" required>
+
+	<label>MEDICINE</label><br>
+	    <textarea type="text" placeholder="Enter medicine" name="medicine" style="width:90%;height:700px;" required></textarea><br>
+
+	</div></div>
+	<div class="clearfix"><button type="submit" class="sbtn" onclick="location.href='http://localhost:8080/confirm'" required>SEND</button>
+	 <button type="button" class="cbtn" style="background-color:DodgerBlue"onclick="http://localhost:8080/login">Cancel</button>
+          </div>
+		  </form>
+</body>
+</html>

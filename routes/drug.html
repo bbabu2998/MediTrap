@@ -1,0 +1,87 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial;}
+* {box-sizing: border-box}
+textarea[type=text],input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+hr{
+ border: 0.5px solid DodgerBlue;
+    margin-bottom: 25px;}
+.top-centered {
+    position: absolute;
+    top: 7%;
+    left:5%;
+    color:#804000;
+    padding:20px;
+	}
+.container {
+    background-color:#d9d9d9;
+	 color: #b33c00;
+	padding: 16px;
+	border-radius: 45px;
+	width:180%;
+	height:600px;
+	}
+button {
+    background-color: #e6e600;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-color:red;
+    cursor: pointer;
+	border-radius: 15px;
+    width: 50%;
+    opacity: 0.9;
+}
+.signupbtn,.cancelbtn {
+  float: left;
+  width: 50%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.w3-padding{padding:20px 16px!important}
+</style>
+</head>
+<body>
+<div class="w3-top" >
+  <div class="w3-bar w3-wide w3-padding w3-card" style="background-color:white">
+    <a href="http://localhost:8080/home" style="color:#ff0000"class="w3-bar-item w3-button"><h7><b>MEDI</h7>TRAP</a>
+	      <a href="http://localhost:8080/map" class="w3-bar-item w3-button">MAP</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:8080/home" class="w3-bar-item w3-button">HOME</a>
+      <a href="http://localhost:8080/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="http://localhost:8080/contact" class="w3-bar-item w3-button">CONTACT</b></a>
+    </div>
+  </div>
+</div>
+<img src="https://toolbox.brightspotcdn.com/dims4/default/ef51e40/2147483647/resize/800x%3E/quality/90/?url=http%3A%2F%2Fziff-davis-brightspot.s3.amazonaws.com%2F1a%2Faa%2Fc40de36a4137b3c0c782ff3f74ab%2Fthinkstockphotos-823767128.jpg" style="width:100%; height:640px;">
+<div class="top-centered">
+<div align="center">
+<div class="container">
+<form  method="post" action="/drugdetailsave">
+<h3><b>DRUG DETAILS</b></h3><hr>
+<label><b>DRUG NAME</b></label><br>
+    <input type="text" placeholder="Enter Name" name="drugname" id="drugname"required /><br>
+    <label><b>PHARMACY NAME</b></label><br>
+        <input type="text" placeholder="Enter pharmacy name" name="pharmacyname" id="pharmacyname"required /><br>
+	<label><b>PHARMACY ADDRESS</b></label><br>
+    <textarea type="text" placeholder="Enter Address" name="address" id="address"style="width:100%; height:150px;"required></textarea><br>
+    <div class="clearfix"><button type="submit" class="signupbtn"required><b>SUBMIT</b></button>
+      <button class="cancelbtn"type="button" onclick="https://localhost:8080:login"><b>CANCEL</b></button></div>
+
+</form>
+	</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<title>login page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial;}
+* {box-sizing: border-box}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.top-centered {
+    position: absolute;
+    top: 15%;
+    right:10%;
+	}
+
+input[type=text]:focus, input[type=password]:focus {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+hr {
+    border: 1px solid DodgerBlue;
+    margin-bottom: 25px;
+}
+button {
+   	padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+.cancelbtn {
+    padding: 10px 10px;
+	background-color: transparent;
+  }
+.signupbtn {
+    padding: 10px 10px;
+	background-color: transparent;
+	}
+.signupbtn,.cancelbtn {
+  float: left;
+  width: 50%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.clearfix1::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 200px) {
+    .signupbtn, .cancelbtn  {
+       width: 100%;
+    }
+}
+.container {
+    border-radius: 45px;
+	 background-color:#d9d9d9;
+	 color: #b33c00;
+    padding: 10px;
+}
+.w3-padding{padding:20px 16px!important}
+</style>
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="http://localhost:8080/home" style="color:#ff0000"class="w3-bar-item w3-button"><h7><b>MEDI</h7>TRAP</a>
+	      <a href="http://localhost:8080/map" class="w3-bar-item w3-button">MAP</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:8080/home" class="w3-bar-item w3-button">HOME</a>
+      <a href="http://localhost:8080/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="http://localhost:8080/contact" class="w3-bar-item w3-button">CONTACT</b></a>
+	     </div>
+  </div>
+</div>
+<img src="http://ak.picdn.net/shutterstock/videos/217609/thumb/1.jpg" style="width:100%; height:640px;">
+<div align="center">
+<div class="top-centered">
+<div class="container">
+   <form method="post" action="/action-deefault" name="loginform" id="login" style="width:500px;">
+  <div class="container1">
+  <h1><b>LOGIN</b></h1>
+    <hr>
+    <label><b>USERNAME</b></label>
+    <input type="text" placeholder="Enter Name" name="username" id="username" title="username" required/>
+	<label><b>PASSWORD</b></label>
+    <input type="password" placeholder="Enter Password" id="password" name="password" title="password" required/ >
+	 <div class="clearfix1">
+	 <select id="select" name="select" style="padding:15px 85px;" >
+	 <option value="" selected><b>Select</b></option>
+  <option value="Doctor"><b>Doctor</b></option>
+  <option value="Patient"><b>Patient</b></option>
+  <option value="Admin"><b>Admin</b></option>
+ </select>
+ <input type="submit" name="submit"  style="background-color:DodgerBlue; padding:13px 85px;" onclick=" validate();"/>
+   <div class="clearfix">
+ 	  <button class="signupbtn" onclick="location.href='http://localhost:8080/reset';" ><h3><b>Forget Password<b></h3></button>
+	  <button  class="cancelbtn" onclick="location.href='http://localhost:8080/registeroption';"><h3><b>Registration<b></h3></button></div>
+	</div>
+  </div>
+</form>
+</div>
+</div>
+<script>
+function validate(){
+    {
+      var x = document.forms["loginform"]["username"].value;
+      var y = document.forms["loginform"]["password"].value;
+       if (x == ""||y=="") {
+           alert("username & password must be filled out");
+           return false;
+       }
+     }
+     check();
+
+   }
+function check() {
+    if (document.getElementById('select').value == "Doctor")
+    {
+       document.getElementById('login').action = '/prescriptionpage';
+    }
+    else if (document.getElementById('select').value == "Patient")
+    {
+      document.getElementById('login').action = '/patprescriptionpage';
+    }
+  else  if (document.getElementById('select').value == "Admin")
+    {
+    document.getElementById('login').action = '/adminoption';
+    }
+}
+</script>
+</body>
+</html>

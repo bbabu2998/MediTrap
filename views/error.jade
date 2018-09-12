@@ -1,0 +1,29 @@
+doctype html
+html
+ head
+  title Prescriptions
+  style.
+    body {
+        font-family: Verdana;
+        font-size: 13px;
+        color: black;
+        background: #ECF0F1;
+    }
+    table, th, td {
+      border: 1px solid black;
+                    }
+  body
+   p(style='white-space:pre;')
+   div
+    table
+     thead
+      tr
+       th USERNAME
+       th PHONE NUMBER
+       th SUBJECT
+        tbody
+         each contact in users
+          tr 
+           td=contact.username
+           td=contact.phoneno
+           td=contact.subject

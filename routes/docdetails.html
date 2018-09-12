@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial;}
+* {box-sizing: border-box}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.signupbtn,.cancelbtn {
+  float: left;
+  width: 50%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.centered {
+    position: absolute;
+     top: 56%;
+     left:19%;
+    transform: translate(-50%, -50%);
+	}
+  button {
+      background-color: #e6e600;
+      color: black;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border-color:red;
+      cursor: pointer;
+  	border-radius: 15px;
+      width: 50%;
+      opacity: 0.9;
+  }
+.w3-padding{padding:20px 16px!important}
+.container {
+    border-radius: 45px;
+	color:#b33c00;
+    background-color:#d9d9d9;
+	width:160%;
+	height:510px;
+    padding: 15px;
+}
+</style>
+<body>
+<div class="w3-top" >
+  <div class="w3-bar w3-wide w3-padding w3-card" style="background-color:white">
+    <a href="http://localhost:8080/home" style="color:#ff0000"class="w3-bar-item w3-button"><h7><b>MEDI</h7>TRAP</a>
+	      <a href="http://localhost:8080/map" class="w3-bar-item w3-button">MAP</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="http://localhost:8080/home" class="w3-bar-item w3-button">HOME</a>
+      <a href="http://localhost:8080/about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="http://localhost:8080/contact" class="w3-bar-item w3-button">CONTACT</b></a>
+
+    </div>
+  </div>
+</div>
+<img src="http://westgatediagnosticscentre.com/wp-content/uploads/2016/11/doctors.jpg" style="width:100%;height:640px">
+<div align="center">
+<div class="centered">
+<div class="container">
+<form  method="post" action="/docdetailsave">
+<h2><b>DOCTOR DETAILS</b></h2><hr>
+<label><b>Register ID</b></label><br>
+    <input type="text" placeholder="Enter ID" name="id" required><br>
+	<label><b>Name</b></label><br>
+	<input type="text" placeholder="Enter name" name="name" required><br>
+	<label><b>Qualification</b></label><br>
+	<input type="text" placeholder="Enter Qualification" name="qualification" required><br>
+    <div class="clearfix">
+	<button class="signupbtn"type="submit"><b>SUBMIT</b></button>
+  <button class="cancelbtn"type="button" onclick="https://localhost:8080:login"><b>CANCEL</b></button></div>
+</form></div></div></div>
+</body>
+</html>
